@@ -82,8 +82,9 @@ video#bgv {
   }
 
   .menu__button-img {
-    max-width: 100%;
-    max-height: 30px;
+    width: 70px;
+
+    padding: 0 15px;
   }
 
   /* LINK RESEAU */
