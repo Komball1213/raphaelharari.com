@@ -98,6 +98,7 @@ video#bgv {
   /* HOME ELEMENT */
 
   .home-wrapper {
+    position: relative;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -110,25 +111,33 @@ video#bgv {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 888px;
-    max-width: 1200px;
-    height: 500px;
+    width: 1200px;
+    
+    height: 665px;
   }
 
+  .home__titre-wrapper {
+    z-index: 10;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100px;
+    background: linear-gradient(90deg,rgba(0, 0, 0, 0), black 1000px, rgba(0, 0, 0, 0));
+  }
   .home__titre {
     position: absolute;
-    left: 15vw;
-    top: 35vh;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     z-index: 80;
     cursor: url("medias\cursor-see.cur"), pointer;
   }
 
   .home__titre-nom {
-    width: 500px;
+    width: 250px;
   }
 
   .home__titre-fonction {
@@ -137,25 +146,29 @@ video#bgv {
 
   .focus {
     transition-property: all;
-    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    transition-duration: 2s;
+  
   }
 
 
   .focus:hover {
     transition-property: all;
-    transition-duration: 1.5s;
+    transition-timing-function: ease-in-out;
+    transition-duration: 2s;
     cursor: url("medias/cursor-see.png"), pointer;
     opacity: 100%;
     z-index: 1000;
+    width: 1200px;
   }
 
   .home__image-1 {
     position: absolute;
     z-index: 4;
-    height: 500px;
-    bottom: -50px;
-    left: 100px;
-    opacity: 60%;
+    width: 500px;
+    top: 0;
+    left: 0;
+    opacity: 50%;
     cursor: url("medias\cursor-see.cur"), pointer;
   }
 
@@ -164,28 +177,48 @@ video#bgv {
   .home__image-2 {
     position: absolute;
     z-index: 1;
-    opacity: 40%;
-    height: 300px;
-    top: 200px;
-    left: -150px;
+    opacity: 50%;
+    width: 500px;
+    top: 0;
+    right: auto;
+    left: auto;
   }
 
   .home__image-3 {
     position: absolute;
     z-index: 2;
-    opacity: 20%;
-    top: -200px;
-    left: -200px;
-    height: 400px;
+    opacity: 50%;
+    width: 500px;
+    top: 0;
+    right: 0;
   }
 
   .home__image-4 {
     position: absolute;
     z-index: 3;
-    opacity: 60%;
-    top: -100px;
-    left: 200px;
-    height: 400px;
+    opacity: 50%;
+    width: 500px;
+    bottom: 0;
+    right: 0;
+  }
+
+  .home__image-5 {
+    position: absolute;
+    z-index: 2;
+    opacity: 50%;
+    width: 500px;
+    bottom: 0;
+    right: auto;
+    left: auto;
+  }
+
+  .home__image-6 {
+    position: absolute;
+    z-index: 3;
+    opacity: 50%;
+    width: 500px;
+    bottom: 0;
+    left: 0;
   }
 
 
