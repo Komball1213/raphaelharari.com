@@ -14,12 +14,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
 
+    <!-- JQUERY             ------>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
     <title>Raphael Harari</title>
 
 </head>
 
 <body>
-<div></div>
+    <div></div>
     <!-- MENU -->
     <div class="menu">
         <div class="menu__container">
@@ -35,10 +38,20 @@
         </div>
     </div>
 
-    <!-- IMG PREVIEW -->
+    <!-- ANIM                   ------->
+    <div class="screen" id="screen">
+        <!-- <h1 class="anim">anim</h1> -->
+        <video id="anim" autoplay muted>
+            <source src="medias\animation - raphael harari - 4s.mp4" type="video/mp4">
+            hahahah
+        </video>
+
+    </div>
+
+    <!-- HOME               ------->
     <div class="home-wrapper">
         <div class="home__titre-wrapper">
-            <div class="home__titre">
+            <div class="home__titre" id="rh">
                 <img class="home__titre-nom" src="medias\RaphaelHarari.png" alt="">
                 <img class="home__titre-fonction" src="medias\musicvideodirector.png" alt="">
             </div>
@@ -57,16 +70,140 @@
         </div>
     </div>
 
+    <!-- WORK PREVIEW SECTION                   ------->
+
+    <div class="wrapper">
+        <div class="slide ">
+            <div class="slide__title first">
+                <h3>
+                    <strong>STEPHANE</strong> - Douleur je fuis
+                </h3>
+
+            </div>
+            <a href="">
+                <img src="medias\Douleur Je Fuis\DOULEUR-JE-FUIS-10.jpg" alt="">
+            </a>
+            <div class="slide__credits">
+                <p>
+                    <span class="text-red">Raphael Harari</span> - Réalisateur
+                </p>
+
+            </div>
+        </div>
+
+        <div class="slide one">
+            <div class="slide__title">
+                <h3>
+                    <strong>ROKHAYA MARIEME BALDE</strong> - Champ de Mars
+                </h3>
+
+            </div>
+            <img src="medias\Champ de Mars\champ-de-mars-4.jpg" alt="">
+            <div class="slide__credits">
+                <p>
+                    <span class="text-red">Raphael Harari</span> - Chef operateur
+                </p>
+
+            </div>
+        </div>
+
+        <div class="slide one">
+            <div class="slide__title">
+                <h3>
+                    <strong>LE SEIL</strong> - Les nuits de Septembre
+                </h3>
+
+            </div>
+            <img src="medias\Les Nuits de Septembre\NDS-20.jpg" alt="">
+            <div class="slide__credits">
+                <p>
+                    <span class="text-red">Raphael Harari</span> - Réalisateur
+                </p>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- CTA                    ------->
+
+    <div class="cta">
+        <div class="cta-wrapper">
+            <video id="cta__video" src="medias\contactez-moi_003.mp4" autoplay loop muted type="video/mp4"
+                poster="medias\manuscrit\vous souhaitez collaborez - button.png"></video>
+
+            <!-- <img src="medias\manuscrit\vous souhaitez collaborez - button.png" alt="">
+            <img src="medias\manuscrit\contactez -moi.png" alt=""> -->
+            <div class="social-wrapper">
+                <img class="arrow" src="medias\manuscrit\arrow.png" alt="flèche">
+                <a href="">
+                    <img class="email" src="medias\manuscrit\mail - button.png" alt="email">
+                </a>
+                <a href="">
+                    <img class="instagram" src="medias\manuscrit\instagram button.png" alt="instagram">
+                </a>
+
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- ABOUT                  ------->
+
+    <div class="about-wrapper">
+        <div class="about__portrait">
+            <img src="medias\raphael harari portrait.png" alt="raphael harari">
+        </div>
+        <div class="about">
+
+            <div class="about__info">
+
+                <h1>Raphael Harari</h1>
+                <p class="about__info-présentation">Raphaël Harari est chef opérateur et réalisateur de films. Deux mots
+                    pour le décrire : passionné et spirituel.</p>
+                <p class="about__info-cv"><span class="about__info-année">2015 </span>Head-Genève, Bachelor en
+                    réalisation</p>
+                <p class="about__info-cv"><span class="about__info-année">2018 </span>Chef opérateur de « Champ de
+                    Mars »
+                    de Rokhaya Marieme Balde, Multiples sélections en festival et prix.</p>
+                <p class="about__info-cv"><span class="about__info-année">2021 </span>Clip vidéo pour l’artiste
+                    Stéphane
+                    « Douleur Je Fuis » (409’000 vue).</p>
+                    <br>
+                <p class="about__contact">email - > <span class="text-red">raphaelharari.ch</span></p>
+                <p class="about__contact">tel - > <span class="text-red">+41 79 688 23 96</span></p>
+                <!-- <h3 class="about__info-me-contacter">Le contacter</h3> -->
+
+
+
+
+
+            </div>
+            <!-- <div class="about__img">
+                    <img class="about__img-img" src="medias/Raphael Harari.jpg" alt="">
+
+                </div> -->
+        </div>
+
+    </div>
+
+
     <!-- RESEAUX -->
 
     <img class="link__instagram" src="medias\manuscrit\instagram button.png" alt="">
 
 
     <!-- <div class="cursor"></div> -->
+
     <!-- back ground vidép -->
-    <video id="bgv" autoplay loop>
-        <source src="medias/fond noir_002.mp4">
-    </video>
+    <video id="bgv" autoplay loop muted poster="" src="medias\fond-noir_002.mp4"></video>
+
+    <!-- SCRIPT                 ------->
+
     <script src="index.js"></script>
 </body>
 

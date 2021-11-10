@@ -65,7 +65,7 @@ video#bgv {
   }
 
 
-  /* MANU ELEMENT */
+  /* MANU ELEMENT           -----*/
 
   .menu {
     position: fixed;
@@ -95,6 +95,21 @@ video#bgv {
     width: 50px;
   }
   
+  /* ANIM         ----- */
+  .screen {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    position: fixed;
+}
+
+#anim {
+    width: 500px;
+}
   
   /* HOME ELEMENT */
 
@@ -127,7 +142,10 @@ video#bgv {
     height: 100px;
     background: linear-gradient(90deg,rgba(0, 0, 0, 0), black 1000px, rgba(0, 0, 0, 0));
   }
+
+
   .home__titre {
+    
     position: absolute;
     display: flex;
     justify-content: center;
@@ -306,30 +324,20 @@ video#bgv {
 
 
 .wrapper {
-  margin-top:25vw;
+  /* margin-top:50vw; */
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: row;
   /* doit correspondre à la longueur de la largeur de tous les items réunis */
-  width: 4000px; 
-  transform: rotate(90deg) translateY(-100vh);
-  transform-origin: top left;
-}
-
-.outer-wrapper {
-  position: absolute;
-  width: 100vh;
-  height: 100vw;
-  transform: rotate(-90deg) translateX(-100vh);
-  transform-origin: top left;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+width: 100vw;
+height: 100vh;
 }
 
 ::-webkit-scrollbar {
   display: none;
 }
+
 
 
 /* WORK PAGE  --------------------------------------------------------------------------------------------------*/
@@ -410,15 +418,91 @@ video#bgv {
   background-color: grey;
 }
 
+/* CTA -------------------------------------------------------------------------------------------------------------*/
+
+.cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+
+#cta__video {
+  width: 50vw;
+  /* box-shadow: 0 0 5px black; */
+}
+
+.cta-wrapper {
+  position: relative;
+ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+.social-wrapper {
+  margin-top: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  position: absolute;
+  left: -20px;
+  bottom: 150px;
+}
+
+.arrow {
+  width: 70px;
+  height: 40px;
+
+}
+
+.email {
+  
+  height: 40px;
+  margin: 0 30px;
+}
+
+.instagram {
+  width:40px;
+  height: 40px;
+}
+
+
+.fadeIn {
+  -webkit-animation: fadeIn 5.2s both; /* Safari 4+ */
+  -moz-animation: fadeIn 5.2s both; /* Fx 5+ */
+  -o-animation: fadeIn 5.2s both; /* Opera 12+ */
+  animation: fadeIn 5.2s both; /* IE 10+, Fx 29+ */
+}
+
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
 /* ABOUT PAGE ------------------------------------------------------------------------------*/
 
 .about-wrapper {
   width: 100vw;
   height: 100vh;
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .about-wrapper h1 {
@@ -427,38 +511,27 @@ video#bgv {
   font-weight: 400;
 }
 
-.about__img {
-  display: flex;
-  flex-direction: row;
+.about__portrait {
   position: absolute;
-}
-
-.about__img-img {
-  margin: 0 50px;
-  width: 400px;
-  height: 80vh;
-  background-image: url(../medias/Raphael\ Harari.jpg);
-  background-size: cover;
-  opacity: 0.1;
-  transition: 2s;
-}
-
-.about__img-img:hover {
-z-index: 10;
-opacity: 100%;
-width: 800px;
-transition: 2s;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 150vh;
+  left: 0;
+  bottom: 0;
 }
 
 .about {
   position: relative;
   display: flex;
   flex-direction: row;
-  width: 1200px;
+  width: 800px;
   max-width: 80vw;
   display: flex;
   align-items: center;
+  left: 400px;
 }
+
 
 .about__info {
   width: 80%;
@@ -471,15 +544,10 @@ font-size: 26px;
 .about__info-me-contacter {
   font-size: 34px;
 }
-
-.social-wrapper {
-  display: inline;
-}
   
-.social-wrapper img {
+/* .social-wrapper img {
   width: 50px;
   height: 50px;
-  background-color: grey;
   margin-right: 30px;
-}
+} */
 
