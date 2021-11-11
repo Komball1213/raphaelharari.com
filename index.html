@@ -17,22 +17,27 @@
     <!-- JQUERY             ------>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
+    <!-- FAVICON -->
+    <link rel="icon" href="medias\icon.png" sizes="any"><!-- 32×32 -->
+    <link rel="icon" href="medias\icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="medias\apple-touch-icon.png">
+
     <title>Raphael Harari</title>
 
 </head>
 
-<body>
+<body class="custom-body">
     <div></div>
     <!-- MENU -->
     <div class="menu">
         <div class="menu__container">
-            <a href="">
+            <a href="#home-section">
                 <img class="menu__button-img" src="medias\manuscrit\home - button.png" alt="">
             </a>
-            <a href="">
+            <a href="#work-section">
                 <img class="menu__button-img" src="medias\manuscrit\work - button.png" alt="">
             </a>
-            <a href="">
+            <a href="#about-section">
                 <img class="menu__button-img" src="medias\manuscrit\about - button.png" alt="">
             </a>
         </div>
@@ -49,7 +54,7 @@
     </div>
 
     <!-- HOME               ------->
-    <div class="home-wrapper">
+    <div id="home-section" class="home-wrapper">
         <div class="home__titre-wrapper">
             <div class="home__titre" id="rh">
                 <img class="home__titre-nom" src="medias\RaphaelHarari.png" alt="">
@@ -72,7 +77,7 @@
 
     <!-- WORK PREVIEW SECTION                   ------->
 
-    <div class="wrapper">
+    <div id="work-section" class="workpreview">
         <div class="slide ">
             <div class="slide__title first">
                 <h3>
@@ -137,10 +142,13 @@
             <img src="medias\manuscrit\contactez -moi.png" alt=""> -->
             <div class="social-wrapper">
                 <img class="arrow" src="medias\manuscrit\arrow.png" alt="flèche">
-                <a href="">
+
+                <a href="mailto: raphaelharari@hotmail.com">
                     <img class="email" src="medias\manuscrit\mail - button.png" alt="email">
                 </a>
-                <a href="">
+
+                <a href="https://www.instagram.com/le_photoraph/" target="_blank"
+                    src="medias\manuscrit\instagram button.png" alt="instagram">
                     <img class="instagram" src="medias\manuscrit\instagram button.png" alt="instagram">
                 </a>
 
@@ -154,7 +162,7 @@
 
     <!-- ABOUT                  ------->
 
-    <div class="about-wrapper">
+    <div id="about-section" class="about-wrapper">
         <div class="about__portrait">
             <img src="medias\raphael harari portrait.png" alt="raphael harari">
         </div>
@@ -173,8 +181,8 @@
                 <p class="about__info-cv"><span class="about__info-année">2021 </span>Clip vidéo pour l’artiste
                     Stéphane
                     « Douleur Je Fuis » (409’000 vue).</p>
-                    <br>
-                <p class="about__contact">email - > <span class="text-red">raphaelharari.ch</span></p>
+                <br>
+                <p class="about__contact">email - > <span class="text-red">raphaelharari@gmail.com</span></p>
                 <p class="about__contact">tel - > <span class="text-red">+41 79 688 23 96</span></p>
                 <!-- <h3 class="about__info-me-contacter">Le contacter</h3> -->
 
@@ -193,8 +201,10 @@
 
 
     <!-- RESEAUX -->
+    <a href="https://www.instagram.com/le_photoraph/" target="_blank" target="_blank" rel="noopener noreferrer">
+        <img class="link__instagram" src="medias\manuscrit\instagram button.png" alt="instagram">
+    </a>
 
-    <img class="link__instagram" src="medias\manuscrit\instagram button.png" alt="">
 
 
     <!-- <div class="cursor"></div> -->
