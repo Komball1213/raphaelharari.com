@@ -165,7 +165,13 @@ h3 {
   align-items: center;
   flex-direction: column;
   z-index: 80;
-  cursor: url("medias\cursor-see.cur"), pointer;
+}
+
+.home__titre a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .home__titre-nom {
@@ -491,11 +497,13 @@ h3 {
 
 .cta-wrapper {
   position: relative;
-
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+
 
 }
 
@@ -508,7 +516,7 @@ h3 {
   flex-direction: row;
   position: absolute;
   left: -20px;
-  bottom: 150px;
+  bottom: 30vh;
 }
 
 .arrow {
