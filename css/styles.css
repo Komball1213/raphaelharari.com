@@ -40,17 +40,6 @@ video#bgv {
   z-index: -100;
 }
 
-.cursor {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  border: 1px solid;
-  background-color: aliceblue;
-  position: absolute;
-  z-index: 100;
-  transition-duration: 200ms;
-  transition-timing-function: ease-out;
-}
 
 .svg {
   fill: red;
@@ -81,7 +70,7 @@ h3 {
 
 .menu {
   position: fixed;
-  z-index: 100;
+  z-index: 1000;
   top: 0;
   width: 100vw;
   height: 80px;
@@ -108,6 +97,39 @@ h3 {
   width: 50px;
 }
 
+/* CURSOR */
+
+div.cursors div {
+  position: absolute;
+  top: 300px;
+  left: 300px;
+  width: 24px;
+  height: 24px;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  z-index: 150;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
+div.cursors div span {
+  position: absolute;
+  top: -40px;
+  left: 40px;
+  width: 400px;
+
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 32px;
+  color: var(--main-color);
+  opacity: 0;
+  transition: opacity 2s;;
+}
+
+div.cursors div span.visible {
+  opacity: 1;
+}
+
 /* ANIM         ----- */
 .screen {
   background-color: rgb(0, 0, 0);
@@ -116,7 +138,7 @@ h3 {
   align-items: center;
   width: 100vw;
   height: 100vh;
-  z-index: 1000;
+  z-index: 10000;
   position: fixed;
 }
 
@@ -146,7 +168,7 @@ h3 {
 }
 
 .home__titre-wrapper {
-  z-index: 10;
+  z-index: 5;
   position: absolute;
   display: flex;
   align-items: center;
@@ -196,7 +218,7 @@ h3 {
   transition-duration: 2s;
   cursor: url("medias/cursor-see.png"), pointer;
   opacity: 100%;
-  z-index: 1000;
+  z-index: 100;
   width: 1200px;
 }
 
@@ -285,6 +307,7 @@ h3 {
   height: 100vh;
   transition: all 2s;
   opacity: 50%;
+  z-index: 200;
 }
 
 .slide a {
@@ -372,12 +395,20 @@ h3 {
   transition: all 2s;
   opacity: 0;
   margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .slide:hover .slide__credits {
   opacity: 100%;
   transition: all 2s;
   margin-top: 15px;
+}
+
+.slide__credits-voirplus img {
+  width: 70px;
 }
 
 
@@ -550,6 +581,7 @@ h3 {
   position: absolute;
   left: -20px;
   bottom: 30vh;
+  z-index: 200;
 }
 
 .arrow {
@@ -617,8 +649,8 @@ h3 {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  height: 150vh;
-  left: 0;
+  height: 100vh;
+  left: 20vw;
   bottom: 0;
 }
 
