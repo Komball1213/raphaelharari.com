@@ -13,6 +13,7 @@ body {
   background-color: black;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  cursor: url("medias\manuscrit\iconmonstr-fish-2.svg"), default;
 }
 
 .custom-body {
@@ -66,7 +67,7 @@ h3 {
 }
 
 
-/* MANU ELEMENT           -----*/
+/* MENU ELEMENT           -----*/
 
 .menu {
   position: fixed;
@@ -76,22 +77,93 @@ h3 {
   height: 80px;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 }
 
 .menu__container {
   box-sizing: border-box;
+  height: 80px;
   margin: 50px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 
-.menu__button-img {
+.menu__button-home {
+  z-index: 200;
+  position: relative;
+  bottom: 7px;
+  width: 45px;
+  height: 40px;
+  margin: 0 15px;
+  background-image: url("../medias/manuscrit/home-dessin.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 1s;
+}
+
+.menu__button-home:hover {
+  background-image: url("../medias/manuscrit/home-dessin_red.png");
+  transition: all 1s;
+}
+
+.menu__button-work {
+  z-index: 200;
+  width: 80px;
+  height: 40px;
+  margin: 0 15px;
+  background-image: url("../medias/manuscrit/work.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 1s;
+}
+
+.menu__button-work:hover {
+  background-image: url("../medias/manuscrit/work_red.png");
+  transition: all 1s;
+}
+
+.menu__button-contact {
+  z-index: 200;
+  width: 90px;
+  height: 40px;
+  margin: 0 15px;
+  background-image: url("../medias/manuscrit/contact.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 1s;
+}
+
+.menu__button-contact:hover {
+  background-image: url("../medias/manuscrit/contact_red.png");
+  transition: all 1s;
+}
+
+.menu__button-about {
+  z-index: 200;
   width: 70px;
-
-  padding: 0 15px;
+  height: 40px;
+  margin: 0 15px;
+  background-image: url("../medias/manuscrit/about.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 1s;
 }
+
+.menu__button-about:hover {
+  background-image: url("../medias/manuscrit/about_red.png");
+  transition: all 1s;
+}
+
 
 /* LINK RESEAU */
 .link__instagram {
   position: fixed;
+  z-index: 200;
   bottom: 50px;
   left: 50px;
   width: 50px;
@@ -163,7 +235,6 @@ div.cursors div span.visible {
   justify-content: center;
   align-items: center;
   width: 1200px;
-
   height: 665px;
 }
 
@@ -211,12 +282,11 @@ div.cursors div span.visible {
 
 }
 
-
 .focus:hover {
   transition-property: all;
   transition-timing-function: ease-in-out;
   transition-duration: 2s;
-  cursor: url("medias/cursor-see.png"), pointer;
+  cursor: url("medias/manuscrit/souris-1-.png"), pointer;
   opacity: 100%;
   z-index: 100;
   width: 1200px;
@@ -231,8 +301,6 @@ div.cursors div span.visible {
   opacity: 50%;
   cursor: url("medias\cursor-see.cur"), pointer;
 }
-
-
 
 .home__image-2 {
   position: absolute;
@@ -514,7 +582,7 @@ div.cursors div span.visible {
   width: 500px;
   /* height: 50vh; */
   transition: all 2s;
-  opacity: 50%;
+  opacity: 80%;
 }
 
 .work__slide:hover {
@@ -535,10 +603,31 @@ div.cursors div span.visible {
 }
 
 .commande {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
   position: fixed;
   right: 50px;
   bottom: 50px;
-  
+}
+
+.commande__previous img{
+  width: 100px;
+}
+
+.commande__retour img{
+  position: relative;
+  bottom: -5px;
+  width: 50px;
+  margin: 0 30px;
+}
+
+.commande__next img {
+  width: 70px;
+  position: relative;
+  bottom: -3px;
 }
 
 
@@ -584,21 +673,21 @@ div.cursors div span.visible {
   z-index: 200;
 }
 
-.arrow {
-  width: 70px;
-  height: 40px;
-
-}
-
 .email {
-
   height: 40px;
-  margin: 0 30px;
+  margin: 0 15px;
 }
 
 .instagram {
   width: 40px;
   height: 40px;
+  margin: 0 15px;
+}
+
+.phone {
+  width: 30px;
+  height: 40px;
+  margin: 0 15px;
 }
 
 
@@ -678,8 +767,113 @@ div.cursors div span.visible {
   font-size: 34px;
 }
 
-/* .social-wrapper img {
-  width: 50px;
-  height: 50px;
-  margin-right: 30px;
-} */
+@media screen and (max-width: 1450px) {
+
+  .home__titre-wrapper {
+    z-index: 5;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 20vw;
+    width: 100vw;
+    height: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 1000px, rgba(0, 0, 0, 0));
+  }
+  
+  .home {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0vw;
+  
+    height: 60vh;
+  }
+
+  .focus {
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+    transition-duration: 2s;
+  
+  }
+  
+  .focus:hover {
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+    transition-duration: 2s;
+    cursor: url("medias/manuscrit/souris-1-.png"), pointer;
+    opacity: 100%;
+    z-index: 100;
+    width: 70vw;
+  }
+
+  .home__image-1 {
+    position: absolute;
+    z-index: 4;
+    width: 300px;
+    top: 0;
+    left: auto;
+    right: auto;
+    opacity: 50%;
+    cursor: url("medias\cursor-see.cur"), pointer;
+  }
+  
+  .home__image-2 {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    opacity: 50%;
+    width: 300px;
+    top: 20vh;
+    left: auto;
+    right: -300px;
+  }
+  
+  .home__image-3 {
+    position: absolute;
+    z-index: 2;
+    opacity: 50%;
+    width: 300px;
+    top: auto;
+    bottom: auto;
+    top: auto;
+    left: auto;
+    right: -300px;
+  }
+  
+  .home__image-4 {
+    display: none;
+    position: absolute;
+    z-index: 3;
+    opacity: 50%;
+    width: 300px;
+    top: 60vh;
+    left: 0;
+  }
+  
+  .home__image-5 {
+    
+    position: absolute;
+    z-index: 2;
+    opacity: 50%;
+    width: 300px;
+    bottom: 0;
+    left: auto;
+    right: auto;
+
+  }
+  
+  .home__image-6 {
+    display: none;
+    position: absolute;
+    z-index: 3;
+    opacity: 50%;
+    width: 50%;
+    bottom: 0;
+    left: 0;
+  }
+
+
+  
+}
