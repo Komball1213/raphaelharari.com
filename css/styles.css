@@ -106,6 +106,7 @@ h3 {
 .menu__button-home:hover {
   background-image: url("../medias/manuscrit/home-dessin_red.png");
   transition: all 1s;
+  transform: rotate(30deg);
 }
 
 .menu__button-work {
@@ -118,11 +119,13 @@ h3 {
   background-repeat: no-repeat;
   background-position: center;
   transition: all 1s;
+  transform: rotate(-1deg);
 }
 
 .menu__button-work:hover {
   background-image: url("../medias/manuscrit/work_red.png");
   transition: all 1s;
+  transform: rotate(-30deg);
 }
 
 .menu__button-contact {
@@ -140,6 +143,7 @@ h3 {
 .menu__button-contact:hover {
   background-image: url("../medias/manuscrit/contact_red.png");
   transition: all 1s;
+  transform: rotate(30deg);
 }
 
 .menu__button-about {
@@ -152,11 +156,13 @@ h3 {
   background-repeat: no-repeat;
   background-position: center;
   transition: all 1s;
+  transform: rotate(-3deg);
 }
 
 .menu__button-about:hover {
   background-image: url("../medias/manuscrit/about_red.png");
   transition: all 1s;
+  transform: rotate(-30deg);
 }
 
 
@@ -195,7 +201,8 @@ div.cursors div span {
   line-height: 32px;
   color: var(--main-color);
   opacity: 0;
-  transition: opacity 2s;;
+  transition: opacity 2s;
+  ;
 }
 
 div.cursors div span.visible {
@@ -251,7 +258,6 @@ div.cursors div span.visible {
 
 
 .home__titre {
-
   position: absolute;
   display: flex;
   justify-content: center;
@@ -262,9 +268,9 @@ div.cursors div span.visible {
 
 .home__titre a {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .home__titre-nom {
@@ -272,7 +278,9 @@ div.cursors div span.visible {
 }
 
 .home__titre-fonction {
-  width: 200px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  width: 250px;
 }
 
 .focus {
@@ -286,7 +294,6 @@ div.cursors div span.visible {
   transition-property: all;
   transition-timing-function: ease-in-out;
   transition-duration: 2s;
-  cursor: url("medias/manuscrit/souris-1-.png"), pointer;
   opacity: 100%;
   z-index: 100;
   width: 1200px;
@@ -299,7 +306,6 @@ div.cursors div span.visible {
   top: 0;
   left: 0;
   opacity: 50%;
-  cursor: url("medias\cursor-see.cur"), pointer;
 }
 
 .home__image-2 {
@@ -456,8 +462,6 @@ div.cursors div span.visible {
   transition: all 2s;
 }
 
-
-
 .slide__credits {
   height: 300px;
   transition: all 2s;
@@ -475,8 +479,22 @@ div.cursors div span.visible {
   margin-top: 15px;
 }
 
-.slide__credits-voirplus img {
-  width: 70px;
+.slide__credits-voirplus {
+  background-image: url("../medias/manuscrit/voir +.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 50px;
+  width: 120px;
+  margin-top: 50px;
+  transition: all 1s;
+}
+
+.slide__credits-voirplus:hover {
+  background-image: url("../medias/manuscrit/voir +_red.png");
+  height: 50px;
+  width: 120px;
+  transition: all 1s;
 }
 
 
@@ -607,17 +625,16 @@ div.cursors div span.visible {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-
   position: fixed;
   right: 50px;
   bottom: 50px;
 }
 
-.commande__previous img{
+.commande__previous img {
   width: 100px;
 }
 
-.commande__retour img{
+.commande__retour img {
   position: relative;
   bottom: -5px;
   width: 50px;
@@ -644,7 +661,8 @@ div.cursors div span.visible {
 }
 
 #cta__video {
-  width: 50vw;
+  width: 70vw;
+  transform: rotate(-1deg);
   /* box-shadow: 0 0 5px black; */
 }
 
@@ -656,8 +674,6 @@ div.cursors div span.visible {
   flex-direction: column;
   width: 100vw;
   height: 100vh;
-
-
 }
 
 .social-wrapper {
@@ -668,7 +684,7 @@ div.cursors div span.visible {
   justify-content: center;
   flex-direction: row;
   position: absolute;
-  left: -20px;
+
   bottom: 30vh;
   z-index: 200;
 }
@@ -743,6 +759,10 @@ div.cursors div span.visible {
   bottom: 0;
 }
 
+.about__portrait img {
+max-height: 80vh;
+}
+
 .about {
   position: relative;
   display: flex;
@@ -767,113 +787,573 @@ div.cursors div span.visible {
   font-size: 34px;
 }
 
+
+/* RESPONSIVE -------------------------------------------------------------------------------------------------------------------------------------------- */
+
 @media screen and (max-width: 1450px) {
 
-  .home__titre-wrapper {
-    z-index: 5;
+  /* HOME */
+
+  .home {
+    width: 70vw;
+    height: 39vw;
+  }
+  
+  .focus:hover {
+    width: 70vw;
+  }
+  
+  .home__image-1 {
+    width: 28vw;
+  }
+  
+  .home__image-2 {
+    width: 28vw;
+  }
+  
+  .home__image-3 {
+    width: 28vw;
+  }
+  
+  .home__image-4 {
+    width: 28vw;
+  }
+  
+  .home__image-5 {
+    width: 28vw;
+  }
+  
+  .home__image-6 {
+    width: 28vw;
+  }
+
+  /* CTA */
+
+  #cta__video {
+    width: 80vw;
+    /* box-shadow: 0 0 5px black; */
+  }
+
+  /* ABOUT 1450 */
+
+  .about-wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+  }
+
+  .about__portrait {
     position: absolute;
     display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    height: 80vh;
+    left: 10vw;
+    bottom: 0;
+  }
+
+  .about__portrait img {
+    max-height: 80vh;
+  }
+
+  /* .about__portrait img {
+    max-height: 80vh;
+  } */
+
+  .about {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 800px;
+    max-width: 80vw;
     align-items: center;
+    justify-content: center;
+    left: 10vw;
+  }
+
+}
+
+/* RESPONSIVE 900 ----------------------------------------------------------------------------------------------- */
+
+@media screen and (max-width: 900px) {
+
+  /* MENU */
+
+  .menu {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    width: 100vw;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu__container {
+    box-sizing: border-box;
+    height: 80px;
+    margin: 50px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  /* LINK RESEAU */
+
+  .link__instagram {
+    display: none;
+  }
+
+  /* CURSOR */
+
+  div.cursors div span {
+    position: absolute;
+    top: -40px;
+    left: -100px;
+    width: 400px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 32px;
+
+  }
+
+  /* HOME 900px */
+
+  .home-wrapper {
+    min-height: 700px;
+    min-height: 100vh;
+    height: auto;
+    overflow: hidden;
+  }
+
+  .home__titre-wrapper {
     justify-content: flex-start;
     margin-left: 20vw;
     width: 100vw;
     height: 0;
     background: linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 1000px, rgba(0, 0, 0, 0));
   }
-  
+
+  .home__titre a {
+    flex-direction: column;
+  }
+
+  .home__titre-fonction {
+    width: 200px;
+  }
+
   .home {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 0vw;
-  
     height: 60vh;
+    max-height: 700px;
+    min-height: 500px;
   }
 
-  .focus {
-    transition-property: all;
-    transition-timing-function: ease-in-out;
-    transition-duration: 2s;
-  
-  }
-  
   .focus:hover {
-    transition-property: all;
-    transition-timing-function: ease-in-out;
-    transition-duration: 2s;
-    cursor: url("medias/manuscrit/souris-1-.png"), pointer;
-    opacity: 100%;
-    z-index: 100;
-    width: 70vw;
+    width: 90vw;
   }
 
   .home__image-1 {
     position: absolute;
-    z-index: 4;
-    width: 300px;
+    width: 40vw;
     top: 0;
     left: auto;
     right: auto;
-    opacity: 50%;
-    cursor: url("medias\cursor-see.cur"), pointer;
   }
-  
+
   .home__image-2 {
     display: none;
-    position: absolute;
-    z-index: 1;
-    opacity: 50%;
-    width: 300px;
-    top: 20vh;
-    left: auto;
-    right: -300px;
   }
-  
+
   .home__image-3 {
     position: absolute;
-    z-index: 2;
-    opacity: 50%;
-    width: 300px;
+    width: 40vw;
     top: auto;
     bottom: auto;
-    top: auto;
     left: auto;
-    right: -300px;
+    right: -45vw;
   }
-  
+
   .home__image-4 {
     display: none;
-    position: absolute;
-    z-index: 3;
-    opacity: 50%;
-    width: 300px;
-    top: 60vh;
-    left: 0;
   }
-  
+
   .home__image-5 {
-    
     position: absolute;
-    z-index: 2;
-    opacity: 50%;
-    width: 300px;
+    width: 40vw;
     bottom: 0;
     left: auto;
     right: auto;
-
   }
-  
+
   .home__image-6 {
     display: none;
-    position: absolute;
-    z-index: 3;
-    opacity: 50%;
-    width: 50%;
-    bottom: 0;
-    left: 0;
   }
 
 
+  /* WORK PREVIEW */
+
+  .workpreview {
+    /* margin-top:50vw; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* doit correspondre à la longueur de la largeur de tous les items réunis */
+    width: 100vw;
+    height: auto;
+  }
+
+  .slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 20px;
+    width: 60vw;
+    height: 100vh;
+    transition: all 2s;
+    opacity: 50%;
+    z-index: 200;
+  }
+
+  .slide:hover {
+    opacity: 100%;
+    width: 90vw;
+    /* transform: translateY(-100px); */
+    transition: all 2s;
+  }
+
+
+  /* CTA */
+
+  #cta__video {
+    width: 100vw;
+    /* box-shadow: 0 0 5px black; */
+  }
+
+  /* ABOUT */
+
+  .about-wrapper {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    position: relative;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    overflow: none;
+  }
+
+  .about__portrait {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 100vh;
+    left: 0;
+    bottom: 0;
+  }
+
+  .about__portrait img {
+    height: 100vh;
+  }
+
+  .about {
+    left: 0;
+  }
   
+  
+  .about__info {
+    width: 80%;
+  }
+
+}
+
+
+@media screen and (max-width: 500px) {
+
+  /* MENU */
+
+  .menu {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    width: 100vw;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px 0 ;
+    box-shadow: 0 0 5px black;
+  }
+
+  .menu__container {
+    box-sizing: border-box;
+    height: 40px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  .menu__button-home {
+    z-index: 200;
+    position: relative;
+    bottom: 7px;
+    width: 35px;
+    height: 40px;
+    margin: 0 10px;
+
+  }
+  
+  .menu__button-work {
+    z-index: 200;
+    width: 70px;
+    height: 40px;
+    margin: 0 10px;
+  }
+  
+  .menu__button-contact {
+    z-index: 200;
+    width: 70px;
+    height: 40px;
+    margin: 0 10px;
+  }
+
+  .menu__button-about {
+    z-index: 200;
+    width: 60px;
+    height: 40px;
+    margin: 0 10px;
+  }
+
+  /* HOME 500px */
+
+  .home-wrapper {
+    min-height: none;
+    min-height: 60vh;
+    height: 60vh;
+  }
+
+  .home__titre-wrapper {
+    justify-content: center;
+    margin-left: 0vw;
+    width: 100vw;
+  }
+
+  .home__image-1 {
+    display: none;
+  }
+
+  .home__image-3 {
+    display: none;
+  }
+
+  .home__image-5 {
+    display: none;
+  }
+
+  /* WORK PREVIEW 500px*/
+
+  .slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 20px;
+    width: 80vw;
+    height: 100vh;
+    transition: all 2s;
+    opacity: 50%;
+    z-index: 200;
+  }
+
+  .slide:hover {
+    opacity: 100%;
+    width: 100vw;
+    /* transform: translateY(-100px); */
+    transition: all 2s;
+  }
+
+  /* WORK PAGE 500px */
+
+  .work-screnn {
+    position: relative;
+    overflow: hidden;
+  
+  }
+
+  .work__info {
+    width: 100vw;
+    height: auto;
+    margin-top: 0vh;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    z-index: 0;
+    /* background-color: blanchedalmond; */
+  }
+  
+  
+  .work__info-wrapper {
+    position: absolute;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    
+    padding-top: 50px;
+  
+    /* width: 100px;
+    height: ; */
+    z-index: 10;
+  }
+  
+  .work__info-left {
+    text-align: right;
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 0 0 0 0;
+  
+  }
+  
+  .work__info-center {
+    width: 2px;
+    height: 0;
+    background-color: gray;
+  }
+  
+  .work__info-right {
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 0 0 0;
+  
+  }
+  
+  .work-wrapper {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(0deg) translateX(0vh); 
+    transform-origin: top left;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    position: absolute;
+  }
+  
+  .work-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .work {
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+    /* doit correspondre à la longueur de la largeur de tous les items réunis */
+    width: 90vw;
+    transform: rotate(0deg) translateY(0vh);
+    transform-origin: center;
+  }
+  
+  .work__slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 20px 0;
+    width: 90vw;
+    /* height: 50vh; */
+    transition: all 2s;
+    opacity: 80%;
+  }
+  
+  .work__slide:hover {
+    opacity: 100%;
+    width: 90vw;
+    /* transform: translateY(-100px); */
+    transition: all 2s;
+  }
+  
+  .work__slide img {
+    width: 90vw;
+    
+  }
+  
+  .work__slide iframe {
+    width: 90vw;
+    height: 258px;
+    border: 0;
+  }
+
+  .commande {
+    background-color: black;
+    width: 100vw;
+    bottom: 0px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    left: 0;
+    right: 0;
+  }
+
+  .commande__previous img {
+    width: 100px;
+  }
+  
+  .commande__retour img {
+    position: relative;
+    bottom: -5px;
+    width: 50px;
+    margin: 0 30px;
+  }
+  
+  .commande__next img {
+    width: 70px;
+    position: relative;
+    bottom: -3px;
+  }
+
+
+
+  /* CTA 500px*/
+
+  #cta__video {
+    width: 140vw;
+    /* box-shadow: 0 0 5px black; */
+  }
+
+  /* ABOUT */
+
+
 }
